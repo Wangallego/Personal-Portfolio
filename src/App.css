@@ -1,0 +1,11 @@
+#root {
+  margin: 0 auto;
+  padding:0;
+  text-align: center;
+  background-image: linear-gradient(
+    to right, 
+    #E0E7FF,
+    #EEF2FF, 
+    #F3F6FF);
+}
+
