@@ -5,7 +5,7 @@ import personalDataImage from '../assets/personal-data-d.png';
 
 function MainSection() {
   return (
-    <main className="mx-[6rem] md:mx-[8rem] mt- mb-6 font">
+    <main className="mx-[6rem] md:mx-[8rem] mt- mb-6 ">
       <div className="flex flex-col justify-center items-center space-y-6 text-center">
         <h2 className="text-4xl md:text-6xl font-bold animate__animated animate__zoomInDown">
           <span className="bg-indigo-400 text-transparent bg-clip-text">
@@ -45,12 +45,12 @@ function MainSection() {
 
 function FeatureCard({ imgSrc, title, description }) {
   return (
-    <div className="w-[20rem] md:w-[36rem] h-[24rem] md:h-[28rem] flex flex-col items-center rounded-lg px-3 shadow-xl border-0 hover:scale-105 transition transform duration-700 gap-3 overflow-scroll md:overflow-hidden bg-gradient-to-br from-blue-300 via-indigo-100 to-slate-300">
+    <div className="w-[20rem] md:w-[36rem] h-[24rem] md:h-[28rem] flex flex-col items-center rounded-lg px-3 shadow-xl border-0 transition transform duration-700 gap-3 overflow-scroll md:overflow-hidden bg-gradient-to-br from-blue-300 via-indigo-100 to-slate-300">
       <img src={imgSrc} alt="img" className="w-[20rem] pt-2" />
-      <h3 className="text-xl mt-2 text-center text-transparent bg-gradient-to-tr from-indigo-600 to-indigo-500 bg-clip-text">
+      <h3 className=" font-medium text-2xl mt-2 text-center text-transparent bg-gradient-to-tr from-indigo-500 to-indigo-400 bg-clip-text">
         {title}
       </h3>
-      <p className="mt-2 text-gray-700">{description}</p>
+      <p className="mt-2 text-gray-600">{description}</p>
     </div>
   );
 }
