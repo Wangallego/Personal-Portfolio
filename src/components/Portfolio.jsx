@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import toDo from '../assets/toDo.png';
+import notes from '../assets/notes.png';
 
 
 // Objeto que contiene los recursos de cada artículo
@@ -11,10 +12,10 @@ const articles = [
       image: toDo
     },
     {
-      title: "LSU TAF",
-      subtitle: "LSU Football Opscase study",
-      description: "Red Six Media approached me to develop an interactive and smooth front-end experience for the LSU - Football Operations Facility Expansion. The project required solutions to produce a website that matched the detailed designs and interactivity concepts provided by Red Six Media whilst remaining fast to use across a wide range of devices.",
-      image: toDo
+      title: "Notas Privadas",
+      subtitle: "Un lugar para compartir notas privadas",
+      description: "La aplicación Notas Privadas te permite crear y compartir notas privadas de forma segura. Cada nota se encripta y solo se puede abrir una vez por el destinatario. Es una manera segura y privada de comunicarte y compartir información confidencial.",      
+      image: notes
     },
     {
       title: "CSS3 Foundations case",
