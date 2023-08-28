@@ -8,7 +8,7 @@ const articles = [
     {
       title: "To Do Clon",
       subtitle: "ToDo Microsoft",
-      description: "Disfruté mucho de una práctica en la que pude familiarizarme con Tailwind CSS. Además, es una aplicación que utilizo con frecuencia y deseaba realizar algunos ajustes. Por ejemplo, la barra de navegación. Entiendo que el estilo de Microsoft debe ser más sobrio, pero considero que se vería más agradable visualmente.",
+      description:" Me sumergí en una experiencia en la que pude explorar a fondo las capacidades de Tailwind CSS y JavaScript vanilla. Esta aplicación es una parte esencial de mi flujo de trabajo diario, y sentía la necesidad de hacer algunos ajustes. ",
       image: toDo
     },
     {
@@ -20,7 +20,7 @@ const articles = [
     {
       title: "CSS3 Foundations case",
       subtitle: "CSS3 Foundations case study",
-      description: "I was the designer and front-end developer for the initial Pet Plate website in 2015 and worked closely with the company as it grew over a period of 5 years, eventually becoming Lead Front-end Developer. By early 2020, Pet Plate had successfully raised a total investment fund of $13 million dollars.",
+      description: "I was the designer and front-end developer for the initial Pet Plate website in 2015 and worked closely with the company as it grew over a period of 5 years, eventually becoming Lead Front-end Developer. By early 2020.",
       image: toDo
     }
   ];
