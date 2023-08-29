@@ -13,8 +13,8 @@ const articles = [
       subtitle: "ToDo Microsoft",
       description:" Me sumergí en una experiencia en la que pude explorar a fondo las capacidades de Tailwind CSS y JavaScript vanilla. Esta aplicación es una parte esencial de mi flujo de trabajo diario, y sentía la necesidad de hacer algunos ajustes. ",
       image: toDo,
-      linkGit: "https://github.com/Wangallego/clonMicrosoft.github.io",
-      linkWeb: ""
+      linkGit: "https://github.com/Wangallego/Clon-Microsof-todo",
+      linkWeb: "https://todo-clon-microsoft.netlify.app/"
     },
     {
       title: "Notas Privadas",
@@ -30,7 +30,7 @@ const articles = [
       description: "Una practica para poner en uso y entender el useState, la componetización y los hooks de React.",
       image: tresEnRaya,
       linkGit: "https://github.com/Wangallego/REACT-TresEnRaya",
-      linkWeb: ""
+      linkWeb: "https://3-en-raya-wan.netlify.app"
     }
   ];
   
@@ -61,13 +61,14 @@ const articles = [
         >
           <p>{description}</p>
           </div>
-        <div className='flex justify-center md:justify-start gap-12 bg-teal-300 p-4 rounded-full max-w-fit'>
-        <a href={linkGit} target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer' >
-          <img src={gitHub} alt="" className="bg-white rounded-full p-1 w-[2.5rem] " />
+          
+        <div className='flex justify-center items-center gap-12 bg-teal-300 p-4 rounded-full max-w-fit'>
+          <a href={linkGit} target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer' >
+            <img src={gitHub} alt="" className="bg-white rounded-full p-1 w-[2.5rem] " />
           </a>
           <a href={linkWeb} 
           target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer'>
-          <img src={web} alt="" className="bg-white rounded-full p-1 w-[2.5rem]" />
+            <img src={web} alt="" className="bg-white rounded-full p-1 w-[2.5rem]" />
           </a>
         </div>
         
