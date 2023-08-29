@@ -62,7 +62,7 @@ const articles = [
           <p>{description}</p>
           </div>
           
-        <div className='flex justify-center items-center gap-12 bg-teal-300 p-4 rounded-full max-w-fit'>
+        <div className='flex justify-start items-center gap-12 bg-teal-300 p-4 rounded-full max-w-fit mx-auto'>
           <a href={linkGit} target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer' >
             <img src={gitHub} alt="" className="bg-white rounded-full p-1 w-[2.5rem] " />
           </a>
