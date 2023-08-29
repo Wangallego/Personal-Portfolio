@@ -8,7 +8,7 @@ import './index.css';
 
 function App() {
   return (
-    <div className='font-mono'> 
+    <div className='font-mono overflow-hidden'> 
      <Header />
      <MainSection />
      <Portfolio />
