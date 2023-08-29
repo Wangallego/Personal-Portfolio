@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import toDo from '../assets/toDo.png';
 import notes from '../assets/notes.png';
+import gitHub from '../assets/gitHub.svg';
+import web from '../assets/web.svg';
+import tresEnRaya from '../assets/TresEnraya.png';
 
 
 // Objeto que contiene los recursos de cada artículo
@@ -9,24 +12,30 @@ const articles = [
       title: "To Do Clon",
       subtitle: "ToDo Microsoft",
       description:" Me sumergí en una experiencia en la que pude explorar a fondo las capacidades de Tailwind CSS y JavaScript vanilla. Esta aplicación es una parte esencial de mi flujo de trabajo diario, y sentía la necesidad de hacer algunos ajustes. ",
-      image: toDo
+      image: toDo,
+      linkGit: "https://github.com/Wangallego/clonMicrosoft.github.io",
+      linkWeb: ""
     },
     {
       title: "Notas Privadas",
       subtitle: "Un lugar para compartir notas privadas",
       description: "La aplicación Notas Privadas te permite crear y compartir notas privadas de forma segura. Cada nota se encripta y solo se puede abrir una vez por el destinatario. Es una manera segura y privada de comunicarte y compartir información confidencial.",      
-      image: notes
+      image: notes,
+      linkGit: "https://github.com/Wangallego/Notas-Privadas",
+      linkWeb: ""
     },
     {
-      title: "CSS3 Foundations case",
-      subtitle: "CSS3 Foundations case study",
-      description: "I was the designer and front-end developer for the initial Pet Plate website in 2015 and worked closely with the company as it grew over a period of 5 years, eventually becoming Lead Front-end Developer. By early 2020.",
-      image: toDo
+      title: "Tres En Raya",
+      subtitle: "Tres en Raya en React",
+      description: "Una practica para poner en uso y entender el useState, la componetización y los hooks de React.",
+      image: tresEnRaya,
+      linkGit: "https://github.com/Wangallego/REACT-TresEnRaya",
+      linkWeb: ""
     }
   ];
   
   // Componente Article que renderiza un artículo
-  function ArticleSection({ title, subtitle, description, image }) {
+  function ArticleSection({ title, subtitle, description, image,linkGit,linkWeb }) {
 
     const [isTextHidden, setIsTextHidden] = useState(true);
 
@@ -52,8 +61,16 @@ const articles = [
         >
           <p>{description}</p>
           </div>
-
-
+        <div className='flex justify-center md:justify-start gap-12 bg-teal-300 p-4 rounded-full max-w-fit'>
+        <a href={linkGit} target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer' >
+          <img src={gitHub} alt="" className="bg-white rounded-full p-1 w-[2.5rem] " />
+          </a>
+          <a href={linkWeb} 
+          target="_blank" className='hover:scale-110 transition transform duration-300' rel='noreferrer'>
+          <img src={web} alt="" className="bg-white rounded-full p-1 w-[2.5rem]" />
+          </a>
+        </div>
+        
         </div>
       </article>
     );
@@ -66,6 +83,7 @@ const articles = [
         <h2 className="text-2xl mx-[8rem] md:text-6xl font-bold text-center text-transparent bg-gradient-to-tr from-indigo-600 to-indgo-500 bg-clip-text">Portfolio & Experiencia</h2>
         {articles.map((article, index) => (
           <ArticleSection key={index} {...article} />
+          
         ))}
       </div>
     );
