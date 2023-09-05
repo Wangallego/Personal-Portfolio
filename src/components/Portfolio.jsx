@@ -40,7 +40,7 @@ const articles = [
     const [isTextHidden, setIsTextHidden] = useState(true);
 
     return (
-      <article className="grid grid-cols-1 w-[80%] md:grid-cols-2 gap-6 md:gap-10 mt-12 mb-[6rem] rounded-lg p-6 md:p-12 border shadow-2xl bg-gradient-to-br from-blue-200 via-indigo-100 to-slate-300 mx-auto text-center hover:scale-100 transition transform duration-700">
+      <article id="portfolio" className="grid grid-cols-1 w-[80%] md:grid-cols-2 gap-6 md:gap-10 mt-12 mb-[6rem] rounded-lg p-6 md:p-12 border shadow-2xl bg-gradient-to-br from-blue-200 via-indigo-100 to-slate-300 mx-auto text-center hover:scale-100 transition transform duration-700">
  
 
      <div className="relative overflow-hidden object-fill rounded-lg" >

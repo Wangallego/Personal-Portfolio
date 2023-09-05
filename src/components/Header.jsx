@@ -1,13 +1,18 @@
-import React from 'react'
 import { useState } from 'react'
-import { navLinks} from '../constants'
+import { navLinks } from '../constants'
+import ContactList from '../components/ContactList'
 import menu from '../assets/menu.svg'
-
 import close from '../assets/close.svg'
 
 
 const NavBar = () => {
     const [toggle, setToggle] = useState(false);
+    const scrollToPortfolio = () => {
+      const portfolioSection = document.getElementById('portfolio'); // ID del elemento en el que quieres desplazarte
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   
     return (
       <nav className='w-full flex py-6 justify-between items-center navbar px-6'>
@@ -19,17 +24,13 @@ const NavBar = () => {
               key={nav.id}
               className={`text-indigo-400 font-bold relative inline-block menu-link group   ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}
             >
-              <a href={`#${nav.id}`}>
-                {nav.title}
-                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+              <a href="#portfolio">
+               {nav.title}
+               <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 transition-all duration-300 ease-in-out group-hover:w-full"></div>
               </a>
             </li>
           ))}
-          <li id="contacto" className="bg-indigo-400 px-2 rounded py-1 ml-10 font-medium">
-            <a href="mailto:juanbc06@gmail.com" className="text-white">
-              Get In Touch
-            </a>
-          </li>
+          <ContactList />
         </ul>
   
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -46,16 +47,16 @@ const NavBar = () => {
             } justify-center items-center p-6 bg-gradient-to-br from-blue-400 via-indigo-300 to-slate-400 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col">
-              {navLinks.map((nav, index) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-gray-900 ${index === navLinks.length - 1 ? 'mb-0' : 'mb-4'}`}
-                >
-                  <a href={`#${nav.id}`}>
-                    {nav.title}
-                  </a>
-                </li>
-              ))}
+            {navLinks.map((nav) => (
+          <li key={nav.id} className={`text-indigo-400 font-bold relative inline-block menu-link group ${nav.id === 'portfolio' ? 'mr-10' : 'mr-0'}`}>
+            <a onClick={nav.id === 'portfolio' ? scrollToPortfolio : undefined} href={`#${nav.id}`}>
+              {nav.title}
+              {nav.id === 'portfolio' && (
+                <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 transition-all duration-300 ease-in-out group-hover:w-full"></div>
+              )}
+            </a>
+          </li>
+        ))}
             </ul>
           </div>
         </div>
