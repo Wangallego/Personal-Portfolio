@@ -46,7 +46,7 @@ const Articles = () => {
           </div>
         )}
       </div>
-      <Footer />
+      <Footer className=''/>
     </div>
   );
 };

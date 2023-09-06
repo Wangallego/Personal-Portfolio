@@ -45,12 +45,12 @@ function MainSection() {
 
 function FeatureCard({ imgSrc, title, description }) {
   return (
-    <div className="w-[20rem] md:w-[36rem] h-[24rem] md:h-[28rem] flex flex-col items-center rounded-lg px-3 shadow-xl border-0 transition transform duration-700 gap-3  md:overflow-hidden bg-gradient-to-br from-blue-300 via-indigo-100 to-slate-300">
-      <img src={imgSrc} alt="img" className="w-[15rem] md:w-[20rem] pt-0 md:pt-2" />
-      <h3 className=" font-medium text-2xl mt-0 md:mt-2 text-center text-transparent bg-gradient-to-tr from-indigo-500 to-indigo-400 bg-clip-text">
+    <div className="w-[20rem] md:w-[36rem] h-[24rem] md:h-[28rem] flex flex-col items-center rounded-lg px-3 shadow-xl border-0 transition transform duration-700 gap-3 md:overflow-hidden bg-gradient-to-br from-blue-300 via-indigo-100 to-slate-300">
+      <img src={imgSrc} alt="img" className="w-[15rem] md:w-[20rem] max-w-full pt-0 md:pt-2" />
+      <h3 className="font-medium text-2xl mt-0 md:mt-2 text-center text-transparent bg-gradient-to-tr from-indigo-500 to-indigo-400 bg-clip-text m-0">
         {title}
       </h3>
-      <p className=" text-gray-600 pb-6">{description}</p>
+      <p className="text-gray-600 pb-6 text-sm md:text-base"> {description} </p>
     </div>
   );
 }
