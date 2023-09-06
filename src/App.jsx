@@ -1,20 +1,17 @@
-import React from 'react';
-import Header from "./components/Header";
-import MainSection from "./components/MainSection";
-import Portfolio from "./components/Portfolio";
-import Footer from "./components/Footer";
-import './App.css';
-import './index.css';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Articles from './components/Articles';
 
-function App() {
+export default function App() {
   return (
-    <div className='font-mono overflow-hidden'> 
-     <Header />
-     <MainSection />
-     <Portfolio />
-     <Footer />
-    </div>
+    <Router>
+      <div className='font-mono overflow-hidden'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/articles' element={<Articles />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App;

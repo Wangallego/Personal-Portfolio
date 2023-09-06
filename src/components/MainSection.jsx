@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import landingPageImage from '../assets/landing-page-d.png';
 import checklistImage from '../assets/checklist-5.png';
 import personalDataImage from '../assets/personal-data-d.png';
@@ -54,5 +54,11 @@ function FeatureCard({ imgSrc, title, description }) {
     </div>
   );
 }
+
+FeatureCard.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default MainSection;

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import {useState} from 'react';
 import toDo from '../assets/toDo.png';
 import notes from '../assets/notes.png';
 import gitHub from '../assets/gitHub.svg';
 import web from '../assets/web.svg';
 import tresEnRaya from '../assets/TresEnraya.png';
-
+import PropTypes from 'prop-types';
 
 // Objeto que contiene los recursos de cada artículo
 const articles = [
@@ -76,7 +76,14 @@ const articles = [
       </article>
     );
   }
-  
+  ArticleSection.propTypes = {
+   title: PropTypes.string.isRequired,
+   subtitle: PropTypes.string.isRequired,
+   description: PropTypes.string.isRequired,
+   image: PropTypes.string.isRequired,
+   linkGit: PropTypes.string.isRequired,
+   linkWeb: PropTypes.string.isRequired
+  };
   // Componente principal que renderiza todos los artículos
   function Portfolio() {
     return (
