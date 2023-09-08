@@ -8,7 +8,7 @@ const NavBar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar px-6'>
+    <nav className='w-full flex py-6 justify-between items-center navbar px-6 relative'>
       <h2 id="logo" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Juan Basoa</h2>
 
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
