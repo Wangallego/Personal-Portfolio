@@ -17,7 +17,7 @@ const Articles = () => {
       // Simula un tiempo de "pending to update" durante 3 segundos
       setTimeout(() => {
         setIsPending(false);
-      }, 3000);
+      }, 1000);
     }, 2000);
   };
 
@@ -28,7 +28,7 @@ const Articles = () => {
         <h1 className="text-3xl font-bold mb-4">Articles</h1>
         {isLoading ? (
           <div className="flex items-center justify-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-500"></div>
             <span className="ml-2">Cargando...</span>
           </div>
         ) : (
@@ -40,9 +40,9 @@ const Articles = () => {
           </button>
         )}
         {isPending && (
-          <div className="mt-4 relative">
+          <div className="mt-4 relative w-full h-full">
             <div className="border-4 border-transparent border-t-[2px] border-indigo-500 w-16 h-16 animate-spin absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-            <span className="ml-2">Pending to update</span>
+            <span className="ml-2 text-center text-xl">Pending to update</span>
           </div>
         )}
       </div>
