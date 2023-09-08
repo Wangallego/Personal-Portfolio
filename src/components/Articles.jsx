@@ -46,10 +46,7 @@ const Articles = () => {
           </div>
         )}
       </div>
-      <div className='relative overflow-hidden object-fit'>
-        <Footer />
-      </div>
-      
+      <Footer />
     </div>
   );
 };
