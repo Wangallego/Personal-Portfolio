@@ -4,9 +4,10 @@ import linkedin from '../assets/linkedin.svg';
 
 
 
+
 function Footer() {
   return (
-<footer className="bg-black h-24 flex text-white justify-center items-center px-6 md:px-12 absolute w-full ">
+<footer className="bg-black h-24 flex text-white justify-center items-center px-6 md:px-12 fixed bottom-0 w-full mt-22">
   <div>
     <ul className="flex justify-center items-center space-x-6">
     <li className="flex space-x-2 items-center">
