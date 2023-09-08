@@ -60,12 +60,6 @@ const NavBar = () => {
             <li
               className={`text-white relative inline-block menu-link group mr-10`}
             >
-              <Link to="/">About</Link>
-              <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 transition-all duration-300 ease-in-out group-hover:w-full"></div>
-            </li>
-            <li
-              className={`text-white relative inline-block menu-link group mr-10`}
-            >
               <Link to="/articles">Articles</Link>
               <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 transition-all duration-300 ease-in-out group-hover:w-full"></div>
             </li>
